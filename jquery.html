@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>jquery</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+<script type="text/javascript">
+  const appDiv = document.getElementById('app')
+  $.ajax({
+    url: 'https://conduit.productionready.io/api/tags',
+    success: function (data) {
+      appDiv.innerHTML += `<p>${JSON.stringify(data)}</p>`
+    }
+  })
+  appDiv.innerHTML = `<h1>JS Starter</h1>`
+</script>
+
+</html>

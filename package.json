@@ -1,0 +1,15 @@
+{
+  "name": "js-e27ivy",
+  "description": "zepto/jquery with cypress",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "cypress": "^3.0.1"
+  },
+  "scripts": {
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
+  }
+}

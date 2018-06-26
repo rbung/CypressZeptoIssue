@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  <title>zepto</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+<script type="text/javascript">
+  const appDiv = document.getElementById('app')
+  $.ajax({
+    url: 'https://conduit.productionready.io/api/tags',
+    success: function (data) {
+      appDiv.innerHTML += `<p>${JSON.stringify(data)}</p>`
+    }
+  })
+  appDiv.innerHTML = `<h1>JS Starter</h1>`
+</script>
+
+</html>
